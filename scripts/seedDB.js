@@ -5,7 +5,7 @@ const db = require("../models");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/menulisting"
+  "mongodb://localhost/project3db"
 );
 
 const menuSeed = [
@@ -76,9 +76,29 @@ const menuSeed = [
   }
 ];
 
+const userSeed = [
+  {
+    firstName: "jack",
+    lastName: "curry",
+    emai: "abc@google.com",
+    password: "abcd"
+  }
+];
+
+db.User
+  .remove({})
+  .then(() => db.User.collection.insertMany(userSeed))
+  .then(data => {
+    // console.log(data.length + " user records inserted!");
+  })
+  .catch(err => {
+    console.error(err);
+  });
+
+
 db.Menu
   .remove({})
-  .then(() => db.Book.collection.insertMany(menuSeed))
+  .then(() => db.Menu.collection.insertMany(menuSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
