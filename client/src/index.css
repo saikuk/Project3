@@ -34,25 +34,31 @@ h2 {
   float: center;
 }
 
-#home, #menu, #chkout{
+#home, #menu, #chkout, #login, #signup{
   color: white;
 }
 
-
-#signup, #login{
-  color:white;
-  float:right;
-
-}
-
 #footer {
+  height:100px;
   background-color:gray;
-  height:50px;
   color:black;
   text-align:center;
   padding-top:5px;
   bottom:0;
-  position: relative;;
+  position: relative;
   width:100%;
+  color:white;
 }
+.pepproni {
+  height: 200;
+  width: 200px;
+ margin: 0 5px 0 5px;
+}
+
+.pizzasection {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
