@@ -1,28 +1,34 @@
 import React, { Component } from 'react';
 
-
 class login extends Component {
-    render() {
-      return (
-        <div className="login">
-  
-  
-  
-      <div className="container" id="login">
-          <h2> login</h2>
-  
-          <hr/>
-          
-      </div>
-  
-  
-       
-        </div>
-      );
-    }
+  constructor() {
+    super();
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-
-
+    handleSubmit(event) {
+      event.preventDefault();
+      const data = new FormData(event.target);
+        
+      fetch('/api/delivery', {
+        method: 'POST',
+        body: data,
+      });
+    }
+    
+      render() {
+        return (
+          <div className="container" id="checkoutpage">
+          <form onSubmit={this.handleSubmit}>
+            <div><h1>Log-In</h1></div>
+            <input type ="email" placeholder ="Email"/>
+            <br />
+            <input type ="password" placeholder ="Password"/>
+            <br />
+            <button>Log In</button> 
+          </form>
+          </div>
+        );
+      }
+    }
 
 export default login;
