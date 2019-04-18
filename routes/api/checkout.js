@@ -2,7 +2,7 @@ const Delivery = require('../../models/delivery');
 const CarryOut = require('../../models/carryOut');
 
 module.exports = (app) => {
-app.post('/api/delivery', (req, res, next) => {
+app.post('/delivery', (req, res, next) => {
     const { body } = req;
     const {
         name,
@@ -58,7 +58,7 @@ app.post('/api/delivery', (req, res, next) => {
             });
         });
     });
-app.post('/api/carryOut'), (req, res, next) =>{
+app.post('/carryout'), (req, res, next) => {
     const { body } = req;
     const {
         name,
@@ -107,3 +107,4 @@ app.post('/api/carryOut'), (req, res, next) =>{
         });
     };
 };
+

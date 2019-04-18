@@ -84,6 +84,15 @@ const userSeed = [
     password: "abcd"
   }
 ];
+const DeliverySeed = [
+  {
+    order_id: "1",
+    name: "Jim ",
+    address: "10 South Ave Philadelphia",
+    phone: 1234567890,
+    email: 'test@gmail.com'
+  }
+];
 
 db.User
   .remove({})
@@ -99,6 +108,18 @@ db.User
 db.Menu
   .remove({})
   .then(() => db.Menu.collection.insertMany(menuSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
+
+  db.Delivery
+  // .remove({})
+  .then(() => db.Delivery.collection.insertMany(DeliverySeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
