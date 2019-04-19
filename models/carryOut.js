@@ -1,15 +1,14 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const deliverySchema = new Schema({
+const carryOutSchema = new Schema({
   order_id: { type: String, required: true },
   name: { type: String, required: true },
-  address: { type: String, required: true },
   phone: { type: Number, required: true },
   email: { type: String, required: true }
   
 });
 
-const Delivery = mongoose.model("Delivery", deliverySchema);
+const carryOut = mongoose.model("CarryOut", carryOutSchema);
 
-module.exports = Delivery;
+module.exports = carryOut;
