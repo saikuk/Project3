@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import deliveryimg from '../images/delivery.png'
+import Navbar from '../components/Navbar';
 
 class Delivery extends Component {
     state ={
@@ -32,43 +34,62 @@ class Delivery extends Component {
           });
         }
         render() {
- 
           return (
-        <form onSubmit={this.makeRequest}>
-            <input 
-              name = 'name' 
-              type ="text" 
-              value = {this.state.name}  
-              onChange ={this.onChange} 
-              placeholder ="Name"
-            />
-            <br />
-            <input
-              name = 'address' 
-              type ="text" 
-              value = {this.state.address} 
-              onChange ={this.onChange} 
-              placeholder ="Address"
-            />
-             <br />
-             <input 
-              name = 'email' 
-              type ="email" 
-              value = {this.state.email} 
-              onChange ={this.onChange} 
-              placeholder ="Email"
-            />
-            <br />
-            <input 
-              name = 'phone' 
-              type="tel" 
-              value = {this.state.phone} 
-              onChange ={this.onChange} 
-              placeholder="123-4567-8901"
-            />
-             <br />
-          <button>Send data!</button>
-        </form>
+            <div id ="deliver">
+              <Navbar/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <div className="container" id="deliveryform">
+                <div className="text-center">
+                  <div><h3>Please complete the form for home delivery </h3></div>
+                  <div><img src={deliveryimg} alt="pizzaimg" id="icon"/></div>
+                  <form onSubmit={this.makeRequest}>
+                    <input 
+                      name = 'name' 
+                      type ="text" 
+                      value = {this.state.name}  
+                      onChange ={this.onChange} 
+                      placeholder ="Name"
+                    />
+                    <br/>
+                    <br/>
+                    <input
+                      name = 'address' 
+                      type ="text" 
+                      value = {this.state.address} 
+                      onChange ={this.onChange} 
+                      placeholder ="Address"
+                    />
+                    <br/>
+                    <br/>
+                    <input 
+                      name = 'email' 
+                      type ="email" 
+                      value = {this.state.email} 
+                      onChange ={this.onChange} 
+                      placeholder ="Email"
+                    />
+                    <br/>
+                    <br/>
+                    <input 
+                      name = 'phone' 
+                      type="tel" 
+                      value = {this.state.phone} 
+                      onChange ={this.onChange} 
+                      placeholder="123-4567-8901"
+                    />
+                    <br/>
+                    <br/>
+                    <button className="btn btn-danger">Send data!</button>
+                    <br/>
+                    <br/>
+                    <br/>
+                  </form>
+                </div>
+              </div>
+            </div>
       );
     }
   }
