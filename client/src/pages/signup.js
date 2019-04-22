@@ -32,48 +32,61 @@ class signup extends Component {
     }  
     render() {
       return (
-        <div id="checkoutpage">
-        <Navbar />
-        <div className="container" >
-
-        <form onSubmit={this.makeRequest}>
-          <div><h1>Sign-Up</h1></div>
-          <input 
-            name ='firstName'
-            type ="text"
-            value = {this.state.firstName} 
-            onChange = {this.onChange}
-            placeholder ="First Name"
-          />
-          <br />
-          <input 
-            name = 'lastName'
-            type ="text"
-            value = {this.state.lastName} 
-            onChange = {this.onChange} 
-            placeholder ="Last Name"
-          />
-          <br />
-          <input 
-            name = 'email'
-            type ="email"
-            value = {this.state.email} 
-            onChange = {this.onChange} 
-            placeholder ="Email"
-          />
-          <br />
-          <input 
-            name = 'password'
-            type ="password"
-            value = {this.state.password} 
-            onChange = {this.onChange} 
-            placeholder ="Password"
-          />
-          <br />
-          <button>Sign Up</button> 
-        </form>
-        </div>
-        </div>
+        <div id="Signup">
+          <Navbar />
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <div className="container" >
+            <div className="text-center">
+              <form onSubmit={this.makeRequest}>
+                <div><h1>Sign-Up</h1></div>
+                <hr/>
+                <input 
+                  name ='firstName'
+                  type ="text"
+                  value = {this.state.firstName} 
+                  onChange = {this.onChange}
+                  placeholder ="First Name"
+                />
+                <br/>
+                <br/>
+                <input 
+                  name = 'lastName'
+                  type ="text"
+                  value = {this.state.lastName} 
+                  onChange = {this.onChange} 
+                  placeholder ="Last Name"
+                />
+                <br/>
+                <br/>
+                <input 
+                  name = 'email'
+                  type ="email"
+                  value = {this.state.email} 
+                  onChange = {this.onChange} 
+                  placeholder ="Email"
+                />
+                <br/>
+                <br/>
+                <input 
+                  name = 'password'
+                  type ="password"
+                  value = {this.state.password} 
+                  onChange = {this.onChange} 
+                  placeholder ="Password"
+                />
+                <br/>
+                <br/>
+                <button className="btn btn-danger">Sign Up</button>
+                <br/>
+                <br/> 
+              </form>
+            </div>
+          </div>
+        </div>   
       );
     }
 }

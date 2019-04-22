@@ -8,32 +8,29 @@ import deliveryimg from '../images/delivery.png'
     return (
 
       <div className="Checkout">
-
-    <Navbar />
-
-    <div className="container" id="checkoutpage">
-        <h2> Please choose type of order.</h2>
-
-        <hr/>
-        <div className="row">
-            <div className="col-sm-6" id="carryout">Carry-Out
-                <div><img src={carryoutimg} alt="pizzaimg" id="icon"/></div>
+        <Navbar />
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div className="container" id="checkoutpage">
+          <h2> Please choose type of order.</h2>
+          <hr/>
+          <div className="row">
+            <div className="col-sm-6" id="carryout">
+              <a className="carryout" href="/CarryOut" id="carryout">Carry-Out</a>
+              <div><img src={carryoutimg} alt="pizzaimg" id="icon"/></div>
             </div>
 
-
-
-            <div className="col-sm-6" id="homedelivery">Home-Delivery
-                <div><img src={deliveryimg} alt="pizzaimg" id="icon"/></div>
+            <div className="col-sm-6" id="homedelivery">
+              <a className="homedelivery" href="/Delivery" id="homedelivery">Home-Delivery</a>
+              <div><img src={deliveryimg} alt="pizzaimg" id="icon"/></div>
+              <br/>
+              <br/>
             </div>
+          </div>
         </div>
-
-        <div className="text-center">
-            <button type="button" className="btn btn-danger " id="submit">Submit Order</button>
-        </div>
-    </div>
-
-
-     
       </div>
     );
   }

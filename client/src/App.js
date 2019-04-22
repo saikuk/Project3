@@ -4,8 +4,8 @@ import Landing from "./pages/Landing";
 import Menu from "./pages/Menu";
 import Checkout from "./pages/Checkout";
 import NoMatch from "./pages/NoMatch";
-import Login from "./pages/login";
-import Signup from "./pages/signup";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import Footer from "./components/Footer";
 import Delivery from './pages/Delivery'
 import CarryOut from './pages/CarryOut'
