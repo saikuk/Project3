@@ -6,6 +6,6 @@ module.exports = {
 
   Order: require("./order"),
 
-  Deliery: require("./delivery")
+  Delivery: require("./delivery")
 
 };

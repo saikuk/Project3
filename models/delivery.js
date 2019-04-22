@@ -13,3 +13,4 @@ const deliverySchema = new Schema({
 const Delivery = mongoose.model("Delivery", deliverySchema);
 
 module.exports = Delivery;
+

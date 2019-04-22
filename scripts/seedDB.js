@@ -118,6 +118,17 @@ db.User
     console.error(err);
   });
 
+  db.Delivery
+  .remove({})
+  .then(() => db.Menu.collection.insertMany(menuSeed))
+  .then(data => {
+    console.log(data.result.n + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
 
 db.Menu
   .remove({})
@@ -131,17 +142,7 @@ db.Menu
     process.exit(1);
   });
 
-  db.Delivery
-  // .remove({})
-  .then(() => db.Delivery.collection.insertMany(DeliverySeed))
-  .then(data => {
-    console.log(data.result.n + " records inserted!");
-    process.exit(0);
-  })
-  .catch(err => {
-    console.error(err);
-    process.exit(1);
-  });
+
 
 
 

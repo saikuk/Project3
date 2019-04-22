@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import Navbar from '../components/Navbar';
-import MenuList from '../components/menuList';
+import Menu from '../components/menu';
 import "../App.css"
 
-class Menu extends Component {
+class MenuPage extends Component {
     render() {
         return (
             <div>
@@ -11,7 +11,7 @@ class Menu extends Component {
 
                     <Navbar />
                     {/* <Jumbotron /> */}
-                    <MenuList />
+                    <Menu />
                     {/*<Checkout /> */}
 
 
@@ -24,4 +24,4 @@ class Menu extends Component {
 
 
 
-export default Menu;
+export default MenuPage;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Landing from "./pages/Landing";
-import Menu from "./pages/Menu";
+import MenuPage from "./pages/MenuPage";
 import Checkout from "./pages/Checkout";
 import NoMatch from "./pages/NoMatch";
 import Login from "./pages/Login";
@@ -19,7 +19,7 @@ import CarryOut from './pages/CarryOut'
         <body >
         <Switch>
           <Route exact path="/" component={Landing} />
-          <Route exact path="/menu" component={Menu} />
+          <Route exact path="/menu" component={MenuPage} />
           <Route exact path="/checkout" component={Checkout} />
           <Route exact path="/login" component={Login} />
           <Route exact path="/signup" component={Signup} />
