@@ -1,10 +1,9 @@
 import React from "react";
 import API from "../../utils/API";
 
-const removeOrder  = id =>{
+const removeOrder  = (id, updateRemoveOrder) =>{
   API.removeOrder(id)
-  .then(res => this.componentDidMount())
-  .catch(err => console.log(err))
+  .then ( res=> {updateRemoveOrder()})
 }
 
 
@@ -16,9 +15,11 @@ export function OrderList({ children }) {
 export function OrderListItem({
   id,
   item,
-  price
+  price,
+  updateRemoveOrder
 })
 {
+  
   return (
       <div className="row">
 
@@ -26,7 +27,7 @@ export function OrderListItem({
           <li className="list-group-item">
             <h4>{item}</h4>
             <p>Price:$  {price}</p>
-            <button onClick = {() => {removeOrder(id)}}>Remove</button>
+            <button onClick = {() => removeOrder(id,updateRemoveOrder)}>Remove</button>
           </li>
           </div>
 

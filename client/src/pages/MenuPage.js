@@ -6,31 +6,36 @@ import "../App.css"
 import API from "../utils/API";
 
 class MenuPage extends Component {
-    state ={
+    state = {
         Order: []
     }
     componentDidMount() {
         this.getOrder();
         // console.log("getevents triggerred here");
-      }
-    
-      getOrder = () => {
+    }
+
+    getOrder = () => {
         API.getAllOrder()
-          .then(({ data }) => {
-            this.setState({ Order: data });
-          })
-          .catch(err => console.log(err));
-      };
+            .then(({ data }) => {
+                this.setState({ Order: data });
+            })
+            .catch(err => console.log(err));
+    };
 
     updateOrder = (price, item) => {
         this.setState({
-            Order: [...this.state.Order,{
+            Order: [...this.state.Order, {
                 price,
                 item
             }]
         })
     }
-    
+
+    updateRemoveOrder = () => {
+        this.getOrder()
+    }
+
+
     render() {
         return (
             <div>
@@ -41,10 +46,10 @@ class MenuPage extends Component {
 
                     <div className="row">
                         <div className="col-9">
-                            <Menu  updateOrder = {this.updateOrder}/>
+                            <Menu updateOrder={this.updateOrder} />
                         </div>
                         <div className="col-3">
-                            <Order  order={this.state.Order}/>
+                            <Order order={this.state.Order} updateRemoveOrder={this.updateRemoveOrder}/>
                         </div>
                     </div>
                     {/*<Checkout /> */}
