@@ -98,7 +98,15 @@ const userSeed = [
   }
 ];
 
-const DeliverySeed = [
+const orderSeed = [
+  {
+    userId: "1",
+    item: "Sprite",
+    price: 2.30
+  }
+];
+
+const deliverySeed = [
   {
     order_id: "1",
     name: "Jim ",
@@ -118,9 +126,20 @@ db.User
     console.error(err);
   });
 
+
+  db.Order
+  .remove({})
+  .then(() => db.Order.collection.insertMany(orderSeed))
+  .then(data => {
+    console.log(data.result.n + " user records inserted!");
+  })
+  .catch(err => {
+    console.error(err);
+  });
+
   db.Delivery
   .remove({})
-  .then(() => db.Menu.collection.insertMany(menuSeed))
+  .then(() => db.Delivery.collection.insertMany(deliverySeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
@@ -140,7 +159,14 @@ db.Menu
   .catch(err => {
     console.error(err);
     process.exit(1);
-  });
+});
+
+db.Order
+  .remove({})
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+});
 
 
 
