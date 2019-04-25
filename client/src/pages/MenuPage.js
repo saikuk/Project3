@@ -28,7 +28,8 @@ class MenuPage extends Component {
                 price,
                 item
             }]
-        })
+        },() => this.getOrder())
+        
     }
 
     updateRemoveOrder = () => {
