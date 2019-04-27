@@ -76,7 +76,7 @@ class CarryOut extends Component {
 
                 <input 
                 type="submit" 
-                value="Log In" 
+                value="Check Out" 
                 className="btn btn-danger"
                 />
                 {/* <button className="btn btn-danger">Send data!</button> */}
