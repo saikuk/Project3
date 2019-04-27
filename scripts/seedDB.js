@@ -4,9 +4,11 @@ const db = require("../models");
 // This file empties the Books collection and inserts the books below
 
 mongoose.connect(
-  process.env.MONGODB_URI ||
-  "mongodb://localhost/project3db" 
+  "mongodb://heroku_q3c9t3nd:Saikuk123@ds015334.mlab.com:15334/heroku_q3c9t3nd" 
 );
+
+
+//  "mongodb://localhost/project3db" 
 
 const menuSeed = [
   {
