@@ -51,6 +51,7 @@ class signup extends Component {
                   value = {this.state.firstName} 
                   onChange = {this.onChange}
                   placeholder ="First Name"
+                  required
                 />
                 <br/>
                 <br/>
@@ -60,6 +61,7 @@ class signup extends Component {
                   value = {this.state.lastName} 
                   onChange = {this.onChange} 
                   placeholder ="Last Name"
+                  required
                 />
                 <br/>
                 <br/>
@@ -69,6 +71,7 @@ class signup extends Component {
                   value = {this.state.email} 
                   onChange = {this.onChange} 
                   placeholder ="Email"
+                  required
                 />
                 <br/>
                 <br/>
@@ -78,6 +81,7 @@ class signup extends Component {
                   value = {this.state.password} 
                   onChange = {this.onChange} 
                   placeholder ="Password"
+                  required
                 />
                 <br/>
                 <br/>

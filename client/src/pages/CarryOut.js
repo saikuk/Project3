@@ -52,6 +52,7 @@ class CarryOut extends Component {
                   value = {this.state.name} 
                   onChange ={this.onChange} 
                   placeholder ="Name"
+                  required
                 />
                 <br/>
                 <br/>
@@ -61,6 +62,7 @@ class CarryOut extends Component {
                   value = {this.state.email} 
                   onChange ={this.onChange}  
                   placeholder ="Email"
+                  required
                 />
                 <br/>
                 <br/>
@@ -70,6 +72,7 @@ class CarryOut extends Component {
                   value = {this.state.phone} 
                   onChange ={this.onChange} 
                   placeholder="123-4567-8901"
+                  required
                 />
                 <br/>
                 <br/>
