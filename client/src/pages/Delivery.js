@@ -13,7 +13,7 @@ class Delivery extends Component {
     // makeRequest = e =>{
     //   e.preventDefault();
 
-https://github.com/saikuk/Project3/pull/12/conflict?name=client%252Fbuild%252Fasset-manifest.json&ancestor_oid=3cce6a652512ba5815167bf078037649d7eeb6bc&base_oid=38650e22a91220b6646c0b6a55648292e3a8986d&head_oid=7486325f782c5b866aa1f6dee7fe29c4bf60627a    //   var formData = new FormData();
+//https://github.com/saikuk/Project3/pull/12/conflict?name=client%252Fbuild%252Fasset-manifest.json&ancestor_oid=3cce6a652512ba5815167bf078037649d7eeb6bc&base_oid=38650e22a91220b6646c0b6a55648292e3a8986d&head_oid=7486325f782c5b866aa1f6dee7fe29c4bf60627a    //   var formData = new FormData();
     //   formData.append("name", this.state.name)
     //   formData.append("address", this.state.address)
     //   formData.append("email", this.state.email)
@@ -100,6 +100,6 @@ https://github.com/saikuk/Project3/pull/12/conflict?name=client%252Fbuild%252Fas
       );
     }
   }
-}
+
 
 export default Delivery;
