@@ -4,11 +4,12 @@ import Landing from "./pages/Landing";
 import MenuPage from "./pages/MenuPage";
 import Checkout from "./pages/Checkout";
 import NoMatch from "./pages/NoMatch";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
+import Login from "./pages/login";
+import Signup from "./pages/signup";
 import Footer from "./components/Footer";
 import Delivery from './pages/Delivery'
 import CarryOut from './pages/CarryOut'
+
 
 
  class App extends Component {

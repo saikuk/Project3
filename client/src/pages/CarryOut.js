@@ -8,21 +8,21 @@ class CarryOut extends Component {
     email: '',
     phone: ''
   }
-  makeRequest = e =>{
-    e.preventDefault();
-    console.log('something')
+  // makeRequest = e =>{
+  //   e.preventDefault();
+  //   console.log('something')
 
-    var formData = new FormData();
-    formData.append("name", this.state.name)
-    formData.append("email", this.state.email)
-    formData.append("phone", this.state.phone)
+  //   var formData = new FormData();
+  //   formData.append("name", this.state.name)
+  //   formData.append("email", this.state.email)
+  //   formData.append("phone", this.state.phone)
 
-          fetch("/api/carryout", {
-            method: "POST",
-            body: formData
-          })
-          console.log(formData)
-        }
+  //         fetch("/api/carryout", {
+  //           method: "POST",
+  //           body: formData
+  //         })
+  //         console.log(formData)
+  //       }
         onChange = e =>{
           const value = e.target.value;
           const nameAttr = e.target.name;
@@ -43,7 +43,7 @@ class CarryOut extends Component {
             <div className ="text-center">
             <div><h3>Please complete the form for carryout</h3></div>
               <div><img src={carryoutimg} alt="pizzaimg" id="icon"/></div>
-              <form onSubmit={this.makeRequest}>
+              <form action="/carryout" method ="post">
                 <hr/>
                 <input 
                   name ="name" 
@@ -72,7 +72,12 @@ class CarryOut extends Component {
                 />
                 <br/>
                 <br/>
-                <button className="btn btn-danger">Send data!</button>
+                <input 
+                type="submit" 
+                value="Log In" 
+                className="btn btn-danger"
+                />
+                {/* <button className="btn btn-danger">Send data!</button> */}
                 <br/>
                 <br/>
                 <br/>

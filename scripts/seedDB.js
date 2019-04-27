@@ -93,7 +93,7 @@ const userSeed = [
   {
     firstName: "jack",
     lastName: "curry",
-    emai: "abc@google.com",
+    email: "abc@google.com",
     password: "abcd"
   }
 ];
@@ -120,9 +120,9 @@ db.User
 
   db.Delivery
   .remove({})
-  .then(() => db.Menu.collection.insertMany(menuSeed))
+  .then(() => db.Delivery.collection.insertMany(DeliverySeed))
   .then(data => {
-    console.log(data.result.n + " records inserted!");
+    console.log(data.result.n + " delivery records inserted!");
     process.exit(0);
   })
   .catch(err => {
