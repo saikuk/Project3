@@ -1,13 +1,15 @@
 {
-  "main.css": "/static/css/main.33c1b201.chunk.css",
-  "main.js": "/static/js/main.5d702b8c.chunk.js",
-  "main.js.map": "/static/js/main.5d702b8c.chunk.js.map",
+  "main.css": "/static/css/main.d3aa5369.chunk.css",
+  "main.js": "/static/js/main.8e9ea7a7.chunk.js",
+  "main.js.map": "/static/js/main.8e9ea7a7.chunk.js.map",
+
   "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
   "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
   "static/js/2.d4626161.chunk.js": "/static/js/2.d4626161.chunk.js",
   "static/js/2.d4626161.chunk.js.map": "/static/js/2.d4626161.chunk.js.map",
   "index.html": "/index.html",
-  "precache-manifest.dad5f7719cd2ce668c22959c8e46998f.js": "/precache-manifest.dad5f7719cd2ce668c22959c8e46998f.js",
+  "precache-manifest.0ca145e81f1921d6a659c73095e72249.js"
+
   "service-worker.js": "/service-worker.js",
   "static/css/main.33c1b201.chunk.css.map": "/static/css/main.33c1b201.chunk.css.map",
   "static/media/brownie.jpg": "/static/media/brownie.786101f9.jpg",

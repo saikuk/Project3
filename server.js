@@ -177,7 +177,7 @@ app.post('/delivery', (req, res, next) => {
       //         message: 'ERROR: Server'
       //     });
       }else{
-          res.redirect('/menu')
+          res.redirect('/completedorder')
       }
       //     res.end({
       //         success: true,
@@ -234,7 +234,7 @@ app.post('/carryout', (req, res, next) => {
           //         message: 'ERROR: Server'
           //     });
           }else{
-            res.redirect('/menu')
+            res.redirect('/com')
           }
           // res.end({
           //     success: true,
