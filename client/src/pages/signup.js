@@ -8,21 +8,21 @@ class signup extends Component {
     email: '',
     password: ''
   }
-  makeRequest = e =>{
-    e.preventDefault();
-    // console.log('something')
-    var formData = new FormData();
-    formData.append("firstName", this.state.firstName)
-    formData.append("lastName", this.state.lastName)
-    formData.append("email", this.state.email)
-    formData.append("password", this.state.password)
+  // makeRequest = e =>{
+  //   e.preventDefault();
+  //   // console.log('something')
+  //   var formData = new FormData();
+  //   formData.append("firstName", this.state.firstName)
+  //   formData.append("lastName", this.state.lastName)
+  //   formData.append("email", this.state.email)
+  //   formData.append("password", this.state.password)
 
-    fetch("/api/signup", {
-      method: "POST",
-      body: formData
-  })
-      console.log(formData)
-    }
+  //   fetch("/signup", {
+  //     method: "POST",
+  //     body: formData
+  // })
+  //     console.log(formData)
+  //   }
     onChange = e =>{
       const value = e.target.value;
       const nameAttr = e.target.name;
@@ -41,7 +41,8 @@ class signup extends Component {
           <br/>
           <div className="container" >
             <div className="text-center">
-              <form onSubmit={this.makeRequest}>
+              {/* <form onSubmit={this.makeRequest}> */}
+              <form action="/signup" method ="post">
                 <div><h1>Sign-Up</h1></div>
                 <hr/>
                 <input 
@@ -80,7 +81,12 @@ class signup extends Component {
                 />
                 <br/>
                 <br/>
-                <button className="btn btn-danger">Sign Up</button>
+                <input 
+                type="submit" 
+                value="Log In" 
+                className="btn btn-danger"
+                />
+                {/* <button className="btn btn-danger">Sign Up</button> */}
                 <br/>
                 <br/> 
               </form>
