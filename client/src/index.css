@@ -14,9 +14,8 @@ code {
 }
 
 .container {
-  background-color: orange;
-  border: 2px solid blue;
-  
+  background-color: rgba(247, 227, 192, 0.727);
+  margin: 15px auto 100px auto;
 }
 h2 {
   text-align: center;

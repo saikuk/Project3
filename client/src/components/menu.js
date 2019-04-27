@@ -20,13 +20,17 @@ class menu extends Component {
       .catch(err => console.log(err));
   };
 
+  updateOrder = (item, price) => {
+    this.props.updateOrder(price, item)
+  }
+
   render() {
     return (
       <div className="Menu">
 
         <div>
           <div className="container" id="menudiv">
-            <h2 >This is the Menu</h2>
+            <h2 >Menu</h2>
             <h1>Pizza</h1>
             <MenuList>
               {this.state.Menu.map(menu => { 
@@ -38,6 +42,7 @@ class menu extends Component {
                     image={menu.image}
                     itemName={menu.itemName}
                     price={(menu.price).toFixed(2)}
+                    updateOrder = {this.updateOrder}
                     />:
                   false
                 );
@@ -54,6 +59,7 @@ class menu extends Component {
                     image={menu.image}
                     itemName={menu.itemName}
                     price={(menu.price).toFixed(2)}
+                    updateOrder = {this.updateOrder}
                     />:
                   false
                 );
@@ -70,6 +76,7 @@ class menu extends Component {
                     image={menu.image}
                     itemName={menu.itemName}
                     price={(menu.price).toFixed(2)}
+                    updateOrder = {this.updateOrder}
                     />:
                   false
                 );

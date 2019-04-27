@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from '../components/Navbar';
-import carryoutimg from '../images/carryout.png'
+import carryoutimg from '../images/carryout.png';
+import { Link } from 'react-router-dom';
 
 class CarryOut extends Component {
   state ={
@@ -72,6 +73,7 @@ class CarryOut extends Component {
                 />
                 <br/>
                 <br/>
+
                 <input 
                 type="submit" 
                 value="Log In" 

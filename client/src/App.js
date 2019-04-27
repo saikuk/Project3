@@ -9,6 +9,7 @@ import Signup from "./pages/signup";
 import Footer from "./components/Footer";
 import Delivery from './pages/Delivery'
 import CarryOut from './pages/CarryOut'
+import Completedorder from "./pages/completedorder";
 
 
 
@@ -26,6 +27,7 @@ import CarryOut from './pages/CarryOut'
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/carryout" component={CarryOut} />
           <Route exact path="/delivery" component={Delivery} />
+          <Route exact path="/completedorder" component={Completedorder} />
           <Route component={NoMatch} />
           
         </Switch>
