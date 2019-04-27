@@ -5,7 +5,8 @@ const db = require("../models");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/project3db"
+  "mongodb://localhost/project3db" ||
+  "mongodb://admin:abc123@ds015334.mlab.com:15334/heroku_q3c9t3nd"
 );
 
 const menuSeed = [
