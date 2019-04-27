@@ -18,13 +18,13 @@ import pizzaimg from '../../images/pizza.png'
                         <a className="nav-link" href="/menu" id="menu">Menu</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/checkout" id="chkout">checkout</a>
+                        <a className="nav-link" href="/checkout" id="chkout">Checkout</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/login" id="login">login</a>
+                        <a className="nav-link" href="/login" id="login">Login</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/signup" id="chkout">signup</a>
+                        <a className="nav-link" href="/signup" id="chkout">Signup</a>
                     </li>
                 </ul>   
 
