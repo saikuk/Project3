@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from '../components/Navbar';
-import carryoutimg from '../images/carryout.png'
+import carryoutimg from '../images/carryout.png';
+import { Link } from 'react-router-dom';
 
 class CarryOut extends Component {
   state ={
@@ -72,7 +73,9 @@ class CarryOut extends Component {
                 />
                 <br/>
                 <br/>
-                <button className="btn btn-danger">Send data!</button>
+                <Link to="/completedorder">
+                <button className="btn btn-danger">complete order</button>
+               </Link>
                 <br/>
                 <br/>
                 <br/>

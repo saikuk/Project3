@@ -30,7 +30,7 @@ class menu extends Component {
 
         <div>
           <div className="container" id="menudiv">
-            <h2 >This is the Menu</h2>
+            <h2 >Menu</h2>
             <h1>Pizza</h1>
             <MenuList>
               {this.state.Menu.map(menu => { 

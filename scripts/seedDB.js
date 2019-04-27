@@ -10,79 +10,79 @@ mongoose.connect(
 
 const menuSeed = [
   {
-    image: "assets/images/pepproni.jpg",
+    image: "assets/images/cheese150.png",
     itemType: "Pizza",
     itemName: "Plain",
     price: 4.30
   },
   { 
-    image: "assets/images/pepproni.jpg",
+    image: "assets/images/Buffalo-Chicken-Pizza150.png",
     itemType: "Pizza",
     itemName: "Buffalo Chicken",
     price: 7.30
   },
   {
-    image: "assets/images/pepproni.jpg",
+    image: "assets/images/Hawaiian150.png",
     itemType: "Pizza",
     itemName: "Honolulu Hawaiian",
     price: 8.50
   },
   {
-    image: "assets/images/pepproni.jpg",
+    image: "assets/images/Spinach-Pizza150.png",
     itemType: "Pizza",
     itemName: "Spinach & Feta",
     price: 7.50
   },
   {
-    image: "assets/images/pepproni.jpg",
+    image: "assets/images/PcPizzaPhillyCheesesteak150.png",
     itemType: "Pizza",
     itemName: "Philly Cheese Steak",
     price: 10.30
   },
   {
-    image: "assets/images/pepproni.jpg",
+    image: "assets/images/Deluxe150.png",
     itemType: "Pizza",
     itemName: "Deluxe",
     price: 12.30
   },
   {
-    image: "assets/images/pepproni.jpg",
+    image: "assets/images/Meat-Lovers150.png",
     itemType: "Pizza",
     itemName: "MeatZZa",
     price: 9.30
   },
   {
-    image: "assets/images/pepproni.jpg",
+    image: "assets/images/chicken-carbonara150.png",
     itemType: "Pasta",
     itemName: "Chicken Carbonara",
     price: 8.99
   },
   {
-    image: "assets/images/pepproni.jpg",
+    image: "assets/images/Pasta-Primavera150.png",
     itemType: "Pasta",
     itemName: "Pasta Primavera",
     price: 8.99
   },
   {
-    image: "assets/images/pepproni.jpg",
+    image: "assets/images/italian150.png",
     itemType: "Pasta",
     itemName: "Italian Sausage Marinara",
     price: 8.99
   },
   {
-    image: "assets/images/pepproni.jpg",
+    image: "assets/images/ChickenAlfredo150.png",
     itemType: "Pasta",
     itemName: "Chicken Alfredo",
     price: 8.99
   },
   {
-    image: "assets/images/pepproni.jpg",
+    image: "assets/images/coke150.png",
     itemType: "Drinks",
     itemName: "Coke",
     price: 2.30
   },
   {
-    image: "assets/images/pepproni.jpg",
+    image: "assets/images/sprite150.png",
     itemType: "Drinks",
     itemName: "Sprite",
     price: 2.30

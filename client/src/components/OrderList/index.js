@@ -6,6 +6,9 @@ const removeOrder  = (id, updateRemoveOrder) =>{
   .then ( res=> {updateRemoveOrder()})
 }
 
+const orderList ={margin:'5px'
+};
+
 
 export function OrderList({ children }) {
   return <ul className="list-group">{children}</ul>;
@@ -18,16 +21,17 @@ export function OrderListItem({
   price,
   updateRemoveOrder
 })
+
 {
   
   return (
       <div className="row">
 
-          <div className="col-10">
-          <li className="list-group-item">
+          <div className="col-12">
+          <li className="list-group-item" style={orderList}>
             <h4>{item}</h4>
             <p>Price:$  {price}</p>
-            <button onClick = {() => removeOrder(id,updateRemoveOrder)}>Remove</button>
+            <button onClick = {() => removeOrder(id,updateRemoveOrder)} >Remove</button>
           </li>
           </div>
 
