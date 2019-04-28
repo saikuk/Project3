@@ -43,7 +43,7 @@ function order(props) {
             </li>
             </div>
 
-            <Link to="/checkout">
+            <Link to="/guest">
            <button className="btn btn-danger"  >Check-out</button>
            </Link>
 

@@ -90,7 +90,7 @@ class Delivery extends Component {
                 <br/>
                 <input 
                 type="submit" 
-                value="Log In" 
+                value="Continue" 
                 className="btn btn-danger"
                 />
                 {/* <button className="btn btn-danger">Send data!</button> */}

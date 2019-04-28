@@ -57,7 +57,7 @@ app.post('/login', function(req, res, next){
       if(!user) { return res.redirect('/login'); }
       req.logIn(user, function(err) {
         if(err) { return next(err); }
-        return res.redirect('/menu')
+        return res.redirect('/completedorder')
       })
     })(req, res, next);
  })
@@ -177,7 +177,7 @@ app.post('/delivery', (req, res, next) => {
       //         message: 'ERROR: Server'
       //     });
       }else{
-          res.redirect('/menu')
+          res.redirect('/completedorder')
       }
       //     res.end({
       //         success: true,
@@ -234,7 +234,7 @@ app.post('/carryout', (req, res, next) => {
           //         message: 'ERROR: Server'
           //     });
           }else{
-            res.redirect('/menu')
+            res.redirect('/completedorder')
           }
           // res.end({
           //     success: true,

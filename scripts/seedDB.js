@@ -133,7 +133,7 @@ db.User
   .remove({})
   .then(() => db.Order.collection.insertMany(orderSeed))
   .then(data => {
-    console.log(data.result.n + " user records inserted!");
+    console.log(data.result.n + " order records inserted!");
   })
   .catch(err => {
     console.error(err);
