@@ -235,6 +235,7 @@ app.post('/carryout', (req, res, next) => {
           //     });
           }else{
             res.redirect('/completedorder')
+
           }
           // res.end({
           //     success: true,
