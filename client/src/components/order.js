@@ -42,9 +42,9 @@ function order(props) {
             <h4>Order Total: ${(total).toFixed(2)}</h4>
             </li>
             </div>
-            
             <div className="text-center">
-            <Link to="/checkout">
+            <Link to="/guest">
+
            <button className="btn btn-danger"  >Check-out</button>
            </Link>
            </div>
