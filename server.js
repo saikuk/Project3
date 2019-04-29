@@ -51,16 +51,24 @@ app.use(session({ secret: "cats" }));
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Post Request to Log-In a User
 app.post('/login', function(req, res, next){
-    passport.authenticate('local', function(err, user, info){
+  passport.authenticate('local', function(err, user, info){
+    if(err) { return next(err); }
+    if(!user) { return res.redirect('/login'); }
+    req.logIn(user, function(err) {
       if(err) { return next(err); }
-      if(!user) { return res.redirect('/login'); }
-      req.logIn(user, function(err) {
-        if(err) { return next(err); }
-        return res.redirect('/completedorder')
-      })
-    })(req, res, next);
- })
+      return res.redirect('/completedorder')
+    })
+  })(req, res, next);
+ });
+
+// Post Request to Log-Out a User
+ app.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/');
+});
+// Post Request to Sign-Up a User
 app.post('/signup', (req, res, next) => {
   console.log("testing")
   const { body } = req;
@@ -124,6 +132,7 @@ app.post('/signup', (req, res, next) => {
       // });
   });
 });
+// Post Request to get Delivery information from the User
 app.post('/delivery', (req, res, next) => {
   const { body } = req;
   let {
@@ -185,6 +194,7 @@ app.post('/delivery', (req, res, next) => {
       //     });
   });
 });
+// Post Request to get Carry-Out information from the User
 app.post('/carryout', (req, res, next) => {
   const { body } = req;
   let {
