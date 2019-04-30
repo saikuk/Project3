@@ -4,24 +4,24 @@ self.__precacheManifest = [
     "url": "/static/media/unlocked.228c553f.png"
   },
   {
-    "revision": "1383d182b90e80099155",
-    "url": "/static/css/main.5474198e.chunk.css"
+    "revision": "1b69acb8c061f0fd4e24",
+    "url": "/static/css/main.76a98817.chunk.css"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "02739c4656a6b4bc8d96",
-    "url": "/static/js/2.303702ed.chunk.js"
+    "revision": "cb2355006464daf8752a",
+    "url": "/static/js/2.b8ed5d79.chunk.js"
   },
   {
     "revision": "05d813e464175cb33fe54092203e01dc",
     "url": "/static/media/pizzaBackground.05d813e4.jpg"
   },
   {
-    "revision": "1383d182b90e80099155",
-    "url": "/static/js/main.066dea05.chunk.js"
+    "revision": "1b69acb8c061f0fd4e24",
+    "url": "/static/js/main.7b852b78.chunk.js"
   },
   {
     "revision": "953b449cb8fb175090c764f43fa43a0b",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/static/media/combo.e7ade10b.jpg"
   },
   {
-    "revision": "b1ba4ca9bf858bf238738d9b53d0176c",
+    "revision": "f2488a33c84fc90f69dbe6c078ed9d8f",
     "url": "/index.html"
   }
 ];

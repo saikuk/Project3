@@ -16,7 +16,6 @@ import pizzaimg from '../../images/pizza.png'
         })
       }
     })
-    debugger
     const content= (this.state.isLogged) ? (
       <>
       <li className="nav-item">

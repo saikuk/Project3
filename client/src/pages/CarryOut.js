@@ -16,7 +16,10 @@ class CarryOut extends Component {
       phone: this.state.phone,
       email: this.state.email
     }).then(data =>{
-      debugger
+        localStorage.setItem('name', this.state.name)
+        localStorage.setItem('email', this.state.email)
+        localStorage.setItem('phone', this.state.phone)
+
         this.props.history.push({
           pathname: '/completedorder',
           state: {message: 'carryout success'}
@@ -77,7 +80,7 @@ class CarryOut extends Component {
               />
               <br/>
               <br/>
-              <button onClick={this.formSubmit.bind(this)}>Log-In</button>              
+              <button class="btn btn-danger" onClick={this.formSubmit.bind(this)}>Checkout</button>              
               <br/>
               <br/>
               <br/>
