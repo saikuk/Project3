@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-
 import { OrderListItem, OrderList } from "../components/OrderList";
 
 const totalCost = { margin: '5px'};
 
 
 
-function order(props) {
+function orderComplete(props) {
   
   let total = 0;
 
@@ -20,8 +18,7 @@ function order(props) {
       <div className="Order">
 
         <div>
-          <div className="container" id="menudiv">
-            <h2 >Your order</h2>  
+          <div>
             <OrderList>
               {props.order.map(order => { 
                 return   (    
@@ -42,12 +39,6 @@ function order(props) {
             <h4>Order Total: ${(total).toFixed(2)}</h4>
             </li>
             </div>
-            <div className="text-center">
-            <Link to="/guest">
-
-           <button className="btn btn-danger"  >Check-out</button>
-           </Link>
-           </div>
 
           </div>
         </div>
@@ -57,4 +48,4 @@ function order(props) {
     );
   }
 
-export default order;
+export default orderComplete;

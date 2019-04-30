@@ -16,6 +16,7 @@ code {
 .container {
   background-color: rgba(247, 227, 192, 0.727);
   margin: 15px auto 100px auto;
+  padding-bottom:30px; 
 }
 h2 {
   text-align: center;

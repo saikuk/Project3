@@ -53,6 +53,8 @@ app.use(passport.session());
 
 // Post Request to Log-In a User
 app.post('/login', function(req, res, next){
+
+
   passport.authenticate('local', function(err, user, info){
     if(err) { throw err }
     if(!user) { throw err }
@@ -70,6 +72,7 @@ app.post('/login', function(req, res, next){
   res.redirect('/');
 });
 // Post Request to Sign-Up a User
+
 app.post('/signup', (req, res, next) => {
   console.log("testing")
   const { body } = req;
@@ -224,6 +227,7 @@ app.post('/carryout', (req, res, next) => {
         res.json(carryOut)
         if (err) {
             console.log(err)
+
           }
          
       });
@@ -237,10 +241,10 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect( "mongodb://admin01:ABC123@ds015334.mlab.com:15334/heroku_q3c9t3nd");
+mongoose.connect("mongodb://localhost/project3db");
 
 
-
+//"mongodb://admin01:ABC123@ds015334.mlab.com:15334/heroku_q3c9t3nd"
 //"mongodb://localhost/project3db" 
 // Start the API server
 app.listen(PORT, function() {

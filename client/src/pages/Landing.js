@@ -1,14 +1,18 @@
 import React, { Component } from "react";
 import Navbar from '../components/Navbar';
+import Countdown from '../components/countdown';
 import "../App.css"
 import brownieimg from '../images/brownie.jpg'
 import handcraftedimg from '../images/handcrafted.jpg'
 import comboimg from '../images/combo.jpg'
 
+
 class Landing extends Component {
+
     componentWillMount(){
         localStorage.removeItem('isLogged')
       }
+
     render() {
         return (
             <div>
@@ -16,6 +20,7 @@ class Landing extends Component {
                     <div className="Home">
                         <div className="container" id="Home">
                             <h2> Coming Soon!</h2>
+                            <Countdown date={`2019-05-13T00:00:00`} />
                             <hr />
                             <div className="row">
 
