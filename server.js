@@ -57,7 +57,7 @@ app.post('/login', function(req, res, next){
       if(!user) { return res.redirect('/login'); }
       req.logIn(user, function(err) {
         if(err) { return next(err); }
-        return res.redirect('/completedorder')
+        return res.redirect('/menu')
       })
     })(req, res, next);
  })
@@ -235,7 +235,6 @@ app.post('/carryout', (req, res, next) => {
           //     });
           }else{
             res.redirect('/completedorder')
-
           }
           // res.end({
           //     success: true,
@@ -252,10 +251,10 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect( "mongodb://admin01:ABC123@ds015334.mlab.com:15334/heroku_q3c9t3nd");
+mongoose.connect("mongodb://localhost/project3db");
 
 
-
+//"mongodb://admin01:ABC123@ds015334.mlab.com:15334/heroku_q3c9t3nd"
 //"mongodb://localhost/project3db" 
 // Start the API server
 app.listen(PORT, function() {

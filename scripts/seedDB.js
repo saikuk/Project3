@@ -3,18 +3,18 @@ const db = require("../models");
 
 // This file empties the Books collection and inserts the books below
 
-mongoose.connect(
-  "mongodb://admin01:ABC123@ds015334.mlab.com:15334/heroku_q3c9t3nd" 
+mongoose.connect(  "mongodb://localhost/project3db" 
+  
 );
 
-
+// "mongodb://admin01:ABC123@ds015334.mlab.com:15334/heroku_q3c9t3nd" 
 //  "mongodb://localhost/project3db" 
 
 const menuSeed = [
   {
     image: "assets/images/cheese150.png",
     itemType: "Pizza",
-    itemName: "Plain",
+    itemName: "Cheese",
     price: 4.30
   },
   { 
@@ -80,13 +80,13 @@ const menuSeed = [
   {
     image: "assets/images/coke150.png",
     itemType: "Drinks",
-    itemName: "Coke",
+    itemName: "Coke 250mL",
     price: 2.30
   },
   {
     image: "assets/images/sprite150.png",
     itemType: "Drinks",
-    itemName: "Sprite",
+    itemName: "Sprite 250mL",
     price: 2.30
   }
 ];
@@ -100,13 +100,13 @@ const userSeed = [
   }
 ];
 
-const orderSeed = [
-  {
-    userId: "1",
-    item: "Sprite",
-    price: 2.30
-  }
-];
+// const orderSeed = [
+//   {
+//     userId: "1",
+//     item: "Sprite",
+//     price: 2.30
+//   }
+// ];
 
 const deliverySeed = [
   {
@@ -131,7 +131,7 @@ db.User
 
   db.Order
   .remove({})
-  .then(() => db.Order.collection.insertMany(orderSeed))
+  // .then(() => db.Order.collection.insertMany(orderSeed))
   .then(data => {
     console.log(data.result.n + " order records inserted!");
   })
