@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from '../components/Navbar';
+import axios from 'axios';
 
 class signup extends Component {
   state ={
@@ -8,96 +9,90 @@ class signup extends Component {
     email: '',
     password: ''
   }
-  // makeRequest = e =>{
-  //   e.preventDefault();
-  //   // console.log('something')
-  //   var formData = new FormData();
-  //   formData.append("firstName", this.state.firstName)
-  //   formData.append("lastName", this.state.lastName)
-  //   formData.append("email", this.state.email)
-  //   formData.append("password", this.state.password)
+  formSubmit(){
+    axios.post('/signup', {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      email: this.state.email,
+      password: this.state.password
+    }).then(data =>{
+        this.props.history.push({
+          pathname: '/login',
+          state: {message: 'is signed up'}
+        })
+    }).catch(err =>{
 
-  //   fetch("/signup", {
-  //     method: "POST",
-  //     body: formData
-  // })
-  //     console.log(formData)
-  //   }
-    onChange = e =>{
-      const value = e.target.value;
-      const nameAttr = e.target.name;
-      this.setState({
-        [nameAttr]: value
-      });
-    }  
-    render() {
-      return (
-        <div id="Signup">
-          <Navbar />
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <br/>
-          <div className="container" >
-            <div className="text-center">
-              {/* <form onSubmit={this.makeRequest}> */}
-              <form action="/signup" method ="post">
-                <div><h1>Sign-Up</h1></div>
-                <hr/>
-                <input 
-                  name ='firstName'
-                  type ="text"
-                  value = {this.state.firstName} 
-                  onChange = {this.onChange}
-                  placeholder ="First Name"
-                  required
-                />
-                <br/>
-                <br/>
-                <input 
-                  name = 'lastName'
-                  type ="text"
-                  value = {this.state.lastName} 
-                  onChange = {this.onChange} 
-                  placeholder ="Last Name"
-                  required
-                />
-                <br/>
-                <br/>
-                <input 
-                  name = 'email'
-                  type ="email"
-                  value = {this.state.email} 
-                  onChange = {this.onChange} 
-                  placeholder ="Email"
-                  required
-                />
-                <br/>
-                <br/>
-                <input 
-                  name = 'password'
-                  type ="password"
-                  value = {this.state.password} 
-                  onChange = {this.onChange} 
-                  placeholder ="Password"
-                  required
-                />
-                <br/>
-                <br/>
-                <input 
-                type="submit" 
-                value="Log In" 
-                className="btn btn-danger"
-                />
-                {/* <button className="btn btn-danger">Sign Up</button> */}
-                <br/>
-                <br/> 
-              </form>
+    })
+  }
+  
+  onChange = e =>{
+    const value = e.target.value;
+    const nameAttr = e.target.name;
+    this.setState({
+      [nameAttr]: value
+    });
+  }  
+  render() {
+    return (
+      <div id="Signup">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div className="container" >
+          <div className="text-center">
+            <div>
+              <div><h1>Sign-Up</h1></div>
+              <hr/>
+              <input 
+                name ='firstName'
+                type ="text"
+                value = {this.state.firstName} 
+                onChange = {this.onChange}
+                placeholder ="First Name"
+                required
+              />
+              <br/>
+              <br/>
+              <input 
+                name = 'lastName'
+                type ="text"
+                value = {this.state.lastName} 
+                onChange = {this.onChange} 
+                placeholder ="Last Name"
+                required
+              />
+              <br/>
+              <br/>
+              <input 
+                name = 'email'
+                type ="email"
+                value = {this.state.email} 
+                onChange = {this.onChange} 
+                placeholder ="Email"
+                required
+              />
+              <br/>
+              <br/>
+              <input 
+                name = 'password'
+                type ="password"
+                value = {this.state.password} 
+                onChange = {this.onChange} 
+                placeholder ="Password"
+                required
+              />
+              <br/>
+              <br/>
+              <button onClick={this.formSubmit.bind(this)}>Log-In</button>
+              <br/>
+              <br/> 
             </div>
           </div>
-        </div>   
-      );
-    }
+        </div>
+      </div>   
+    );
+  }
 }
   export default signup;

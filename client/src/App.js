@@ -11,15 +11,18 @@ import Footer from "./components/Footer";
 import Delivery from './pages/Delivery'
 import CarryOut from './pages/CarryOut'
 import Completedorder from "./pages/completedorder";
+import Navbar from './components/Navbar';
 
 
 
  class App extends Component {
+
   render() {
     return (
       <Router>
       <div>
         <body >
+        <Navbar />
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route exact path="/menu" component={MenuPage} />

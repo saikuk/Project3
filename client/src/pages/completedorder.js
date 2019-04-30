@@ -32,9 +32,11 @@ class Completedorder extends Component {
 
     }
 
+
     updateRemoveOrder = () => {
         this.getOrder()
     }
+
 
     render() {
         return (

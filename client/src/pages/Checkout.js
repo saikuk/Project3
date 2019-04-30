@@ -8,7 +8,6 @@ import deliveryimg from '../images/delivery.png'
     return (
 
       <div className="Checkout">
-        <Navbar />
         <br/>
         <br/>
         <br/>

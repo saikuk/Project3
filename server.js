@@ -51,16 +51,28 @@ app.use(session({ secret: "cats" }));
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Post Request to Log-In a User
 app.post('/login', function(req, res, next){
-    passport.authenticate('local', function(err, user, info){
-      if(err) { return next(err); }
-      if(!user) { return res.redirect('/login'); }
-      req.logIn(user, function(err) {
-        if(err) { return next(err); }
-        return res.redirect('/menu')
-      })
-    })(req, res, next);
- })
+
+
+  passport.authenticate('local', function(err, user, info){
+    if(err) { throw err }
+    if(!user) { throw err }
+    req.logIn(user, function(err) {
+      if(err) { throw err }
+      // return res.redirect('/completedorder')
+      res.json(user)
+    })
+  })(req, res, next);
+ });
+
+// Post Request to Log-Out a User
+ app.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/');
+});
+// Post Request to Sign-Up a User
+
 app.post('/signup', (req, res, next) => {
   console.log("testing")
   const { body } = req;
@@ -108,22 +120,14 @@ app.post('/signup', (req, res, next) => {
   newUser.lastName = lastName;
   newUser.password = password;
   newUser.save((err, user) => {
-    console.log("SOMETHING")
+    // console.log("SOMETHING")
+    res.json(user)
       if (err) {
         console.log(err)
-      //     res.end({
-      //     //     success: false,
-      //     //     message: 'ERROR: Server'
-      //     });
-      }else{
-        res.redirect('/login')
       }
-      // res.end({
-      //     // success: true,
-      //     // message: 'Signed Up'
-      // });
   });
 });
+// Post Request to get Delivery information from the User
 app.post('/delivery', (req, res, next) => {
   const { body } = req;
   let {
@@ -170,21 +174,14 @@ app.post('/delivery', (req, res, next) => {
   newDelivery.phone = phone;
   newDelivery.email = email;
   newDelivery.save((err, delivery) => {
-      if (err) {
+    res.json(delivery)  
+    if (err) {
         console.log(err)
-      //     res.end({
-      //         success: false,
-      //         message: 'ERROR: Server'
-      //     });
-      }else{
-          res.redirect('/completedorder')
       }
-      //     res.end({
-      //         success: true,
-      //         message: 'Delivery Success'
-      //     });
+      
   });
 });
+// Post Request to get Carry-Out information from the User
 app.post('/carryout', (req, res, next) => {
   const { body } = req;
   let {
@@ -227,19 +224,12 @@ app.post('/carryout', (req, res, next) => {
       newCarryOut.email = email;
       console.log("%%%%%%%%%%%%%%%%")
       newCarryOut.save((err, carryOut) => {
-          if (err) {
+        res.json(carryOut)
+        if (err) {
             console.log(err)
-          //     res.end({
-          //         success: false,
-          //         message: 'ERROR: Server'
-          //     });
-          }else{
-            res.redirect('/completedorder')
+
           }
-          // res.end({
-          //     success: true,
-          //     message: 'Carry Out Success'
-          // });
+         
       });
   });
 
