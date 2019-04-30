@@ -18,6 +18,10 @@ class Delivery extends Component {
       email: this.state.email,
       phone: this.state.phone
     }).then(data =>{
+      localStorage.setItem('name', this.state.name)
+      localStorage.setItem('address', this.state.address)
+      localStorage.setItem('email', this.state.email)
+      localStorage.setItem('phone', this.state.phone)
         this.props.history.push({
           pathname: '/completedorder',
           state: {message: 'is signed up'}
@@ -86,7 +90,7 @@ class Delivery extends Component {
               />
               <br/>
               <br/>
-              <button onClick={this.formSubmit.bind(this)}>Log-In</button>
+              <button class="btn btn-danger" onClick={this.formSubmit.bind(this)}>Checkout</button>
               <br/>
               <br/>
               <br/>

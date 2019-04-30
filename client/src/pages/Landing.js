@@ -11,6 +11,11 @@ class Landing extends Component {
 
     componentWillMount(){
         localStorage.removeItem('isLogged')
+        localStorage.removeItem('name')
+        localStorage.removeItem('address')
+        localStorage.removeItem('email')
+        localStorage.removeItem('phone')
+        
       }
 
     render() {

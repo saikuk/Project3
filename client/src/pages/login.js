@@ -65,7 +65,7 @@ class login extends Component {
               />
               <br/>
               <br/>
-              <button onClick={this.formSubmit.bind(this)}>Log-In</button>
+              <button class="btn btn-danger" onClick={this.formSubmit.bind(this)}>Log-In</button>
               <br/>
               <br/>
             </div>
