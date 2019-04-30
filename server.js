@@ -241,7 +241,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/project3db");
+mongoose.connect("mongodb://admin01:ABC123@ds015334.mlab.com:15334/heroku_q3c9t3nd");
 
 
 //"mongodb://admin01:ABC123@ds015334.mlab.com:15334/heroku_q3c9t3nd"

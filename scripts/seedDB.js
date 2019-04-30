@@ -3,7 +3,7 @@ const db = require("../models");
 
 // This file empties the Books collection and inserts the books below
 
-mongoose.connect(  "mongodb://localhost/project3db" 
+mongoose.connect(  "mongodb://admin01:ABC123@ds015334.mlab.com:15334/heroku_q3c9t3nd"
   
 );
 
