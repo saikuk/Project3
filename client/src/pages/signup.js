@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from '../components/Navbar';
+import axios from 'axios';
 
 class signup extends Component {
   state ={
@@ -7,6 +8,21 @@ class signup extends Component {
     lastName: '',
     email: '',
     password: ''
+  }
+  formSubmit(){
+    axios.post('/signup', {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
+      email: this.state.email,
+      password: this.state.password
+    }).then(data =>{
+        this.props.history.push({
+          pathname: '/login',
+          state: {message: 'is signed up'}
+        })
+    }).catch(err =>{
+
+    })
   }
   
   onChange = e =>{
@@ -19,7 +35,6 @@ class signup extends Component {
   render() {
     return (
       <div id="Signup">
-        <Navbar />
         <br/>
         <br/>
         <br/>
@@ -27,7 +42,7 @@ class signup extends Component {
         <br/>
         <div className="container" >
           <div className="text-center">
-            <form action="/signup" method ="post">
+            <div>
               <div><h1>Sign-Up</h1></div>
               <hr/>
               <input 
@@ -70,14 +85,10 @@ class signup extends Component {
               />
               <br/>
               <br/>
-              <input 
-              type="submit" 
-              value="Log In" 
-              className="btn btn-danger"
-              />
+              <button onClick={this.formSubmit.bind(this)}>Log-In</button>
               <br/>
               <br/> 
-            </form>
+            </div>
           </div>
         </div>
       </div>   

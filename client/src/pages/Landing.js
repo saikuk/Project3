@@ -6,11 +6,13 @@ import handcraftedimg from '../images/handcrafted.jpg'
 import comboimg from '../images/combo.jpg'
 
 class Landing extends Component {
+    componentWillMount(){
+        localStorage.removeItem('isLogged')
+      }
     render() {
         return (
             <div>
                 <div className="landing">
-                    <Navbar />
                     <div className="Home">
                         <div className="container" id="Home">
                             <h2> Coming Soon!</h2>
