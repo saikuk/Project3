@@ -3,7 +3,36 @@ import "./style.css";
 import pizzaimg from '../../images/pizza.png'
 
  class Navbar extends Component {
+   state={
+     isLogged: false
+   }
+
+  
   render() {
+    setInterval(() => {
+      if(localStorage.isLogged && this.state.isLogged === false){
+        this.setState({
+          isLogged: true
+        })
+      }
+    })
+    debugger
+    const content= (this.state.isLogged) ? (
+      <>
+      <li className="nav-item">
+        <a className="nav-link" href="/login" id="login">Login</a>
+      </li>
+      </>
+    ):(
+      <>
+      <li className="nav-item">
+        <a className="nav-link" href="/login" id="login">Login</a>
+      </li>
+      <li className="nav-item">
+        <a className="nav-link" href="/signup" id="chkout">Signup</a>
+      </li>
+      </>
+    )
     return (
       <div className="Navbar">
         <nav className="navbar navbar-expand-lg navbar-light" id="navlist">
@@ -15,12 +44,7 @@ import pizzaimg from '../../images/pizza.png'
             <li className="nav-item">
               <a className="nav-link" href="/menu" id="menu">Menu</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/login" id="login">Login</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/signup" id="chkout">Signup</a>
-            </li>
+            {content}
           </ul>   
         </nav>     
       </div>

@@ -2,12 +2,28 @@ import React, { Component } from 'react';
 import Navbar from '../components/Navbar';
 import carryoutimg from '../images/carryout.png';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 class CarryOut extends Component {
   state ={
     name: '',
     email: '',
     phone: ''
+  }
+  formSubmit(){
+    axios.post('/carryout', {
+      name: this.state.name,
+      phone: this.state.phone,
+      email: this.state.email
+    }).then(data =>{
+      debugger
+        this.props.history.push({
+          pathname: '/completedorder',
+          state: {message: 'carryout success'}
+        })
+    }).catch(err =>{
+
+    })
   }
 
   onChange = e =>{
@@ -21,7 +37,6 @@ class CarryOut extends Component {
   render() {
     return (
       <div id ="CarryOut">
-        <Navbar/>
         <br/>
         <br/>
         <br/>
@@ -30,7 +45,7 @@ class CarryOut extends Component {
           <div className ="text-center">
             <div><h3>Please complete the form for carryout</h3></div>
             <div><img src={carryoutimg} alt="pizzaimg" id="icon"/></div>
-            <form action="/carryout" method ="post">
+            <div>
               <hr/>
               <input 
                 name ="name" 
@@ -62,15 +77,11 @@ class CarryOut extends Component {
               />
               <br/>
               <br/>
-              <input 
-              type="submit" 
-              value="Check Out" 
-              className="btn btn-danger"
-              />
+              <button onClick={this.formSubmit.bind(this)}>Log-In</button>              
               <br/>
               <br/>
               <br/>
-            </form>
+            </div>
           </div>
         </div>
       </div>

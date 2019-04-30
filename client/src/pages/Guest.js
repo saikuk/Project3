@@ -8,7 +8,6 @@ import unlocked from '../images/unlocked.png'
     return (
 
       <div className="Checkout">
-        <Navbar />
         <br/>
         <br/>
         <br/>

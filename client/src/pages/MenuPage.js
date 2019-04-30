@@ -42,7 +42,6 @@ class MenuPage extends Component {
             <div>
                 <div className="landing">
 
-                    <Navbar />
                     {/* <Jumbotron /> */}
 
                     <div className="row">

@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/static/media/pizzaBackground.05d813e4.jpg"
   },
   {
-    "revision": "202b3082e7f4c08d938c",
+    "revision": "9695439e6f7632eac35e",
     "url": "/static/css/main.b8a11985.chunk.css"
   },
   {
@@ -12,16 +12,16 @@ self.__precacheManifest = [
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "81cb760fd962fff44a95",
-    "url": "/static/js/2.e09eb232.chunk.js"
+    "revision": "610ee21b1cfcbf7fdf08",
+    "url": "/static/js/2.1f094e43.chunk.js"
   },
   {
     "revision": "228c553f44751fb1f5ae7df66c31e663",
     "url": "/static/media/unlocked.228c553f.png"
   },
   {
-    "revision": "202b3082e7f4c08d938c",
-    "url": "/static/js/main.479fde2a.chunk.js"
+    "revision": "9695439e6f7632eac35e",
+    "url": "/static/js/main.4cfdf64c.chunk.js"
   },
   {
     "revision": "953b449cb8fb175090c764f43fa43a0b",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/static/media/combo.e7ade10b.jpg"
   },
   {
-    "revision": "711c5af71bccfa3aa22176cf6219313a",
+    "revision": "68ca93f5879e4fde97c2e6da37b3ede7",
     "url": "/index.html"
   }
 ];

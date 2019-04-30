@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import deliveryimg from '../images/delivery.png'
 import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 class Delivery extends Component {
   state ={
@@ -9,6 +10,21 @@ class Delivery extends Component {
     address: '',
     email: '',
     phone: ''
+  }
+  formSubmit(){
+    axios.post('/delivery', {
+      name: this.state.name,
+      address: this.state.address,
+      email: this.state.email,
+      phone: this.state.phone
+    }).then(data =>{
+        this.props.history.push({
+          pathname: '/completedorder',
+          state: {message: 'is signed up'}
+        })
+    }).catch(err =>{
+
+    })
   }
   onChange = e =>{
     const value = e.target.value;
@@ -21,7 +37,6 @@ class Delivery extends Component {
   render() {
     return (
       <div id ="deliver">
-        <Navbar/>
         <br/>
         <br/>
         <br/>
@@ -30,7 +45,7 @@ class Delivery extends Component {
           <div className="text-center">
             <div><h3>Please complete the form for home delivery </h3></div>
             <div><img src={deliveryimg} alt="pizzaimg" id="icon"/></div>
-            <form action="/delivery" method="post">
+            <div>
               <input 
                 name = 'name' 
                 type ='text' 
@@ -71,15 +86,11 @@ class Delivery extends Component {
               />
               <br/>
               <br/>
-              <input 
-              type="submit" 
-              value="Check Out" 
-              className="btn btn-danger"
-              />
+              <button onClick={this.formSubmit.bind(this)}>Log-In</button>
               <br/>
               <br/>
               <br/>
-            </form>
+            </div>
           </div>
         </div>
       </div>
