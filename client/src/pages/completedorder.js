@@ -42,7 +42,6 @@ class Completedorder extends Component {
         return (
 
             <div className="Completedorder">
-                <Navbar />
                 <br />
                 <br />
                 <br />
