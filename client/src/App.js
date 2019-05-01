@@ -12,6 +12,7 @@ import Delivery from './pages/Delivery'
 import CarryOut from './pages/CarryOut'
 import Completedorder from "./pages/completedorder";
 import Navbar from './components/Navbar';
+import Completed from './pages/Completed';
 
 
 
@@ -32,6 +33,7 @@ import Navbar from './components/Navbar';
           <Route exact path="/carryout" component={CarryOut} />
           <Route exact path="/delivery" component={Delivery} />
           <Route exact path="/guest" component={Guest} />
+          <Route exact path="/completed" component={Completed} />
           <Route exact path="/completedorder" component={Completedorder} />
           <Route component={NoMatch} />
           

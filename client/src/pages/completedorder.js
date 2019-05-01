@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Navbar from '../components/Navbar';
 import Order from '../components/orderComplete';
 import "../App.css"
 import API from "../utils/API";
+import { Link } from 'react-router-dom';
 
 class Completedorder extends Component {
 
@@ -68,8 +68,9 @@ class Completedorder extends Component {
 
                         <Order order={this.state.Order} updateRemoveOrder={this.updateRemoveOrder} />
 
-
+                        <Link to="/completed">
                         <button className="btn btn-danger">Submit order</button>
+                        </Link>
                     </div>
 
                 </div>
@@ -94,8 +95,9 @@ class Completedorder extends Component {
 
                         <Order order={this.state.Order} updateRemoveOrder={this.updateRemoveOrder} />
 
-
-                        <button className="btn btn-danger">Submit order</button>
+                        <Link to="/completed">        
+                        <button className="btn btn-danger" >Submit order</button>
+                        </Link>
                     </div>
 
                 </div>

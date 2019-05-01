@@ -21,5 +21,5 @@ export default {
   removeOrder: function(id){
     return axios.delete("/api/order/" + id);
   }
-  
+
 };
