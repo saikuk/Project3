@@ -9,11 +9,17 @@ once they are done selecting items from the menu they can either check out as gu
 Once the order is submitted, customer gets an auto generated email with the order information.
 The home page has the coming soon items to make customers aware. It also uses a countdown flip clock which counts down the days until new items will be added to the menu.
 
-#Technologies used: 
-React js, node js, mongo, CSS, bootstrap, passport authentication, flip clock countdown.
+# Technologies used 
+- React js
+- node js
+- mongoDB
+- CSS 
+- bootstrap 
+- passport.js authentication 
+- flip clock countdown
 
 
-#contributors:
+# contributors
 Sai Kuk: database and backend
 Nathan Daly: Authentication and routes
 Priya patel: Frontend and routes.
