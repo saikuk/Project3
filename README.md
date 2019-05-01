@@ -20,6 +20,6 @@ The home page has the coming soon items to make customers aware. It also uses a 
 
 
 # contributors
-Sai Kuk: database and backend
-Nathan Daly: Authentication and routes
-Priya patel: Frontend and routes.
+- Sai Kuk: database and backend
+- Nathan Daly: Authentication and routes
+- Priya patel: Frontend and routes.
