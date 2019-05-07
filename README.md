@@ -23,3 +23,5 @@ The home page has the coming soon items to make customers aware. It also uses a 
 - Sai Kuk: database and backend
 - Nathan Daly: Authentication and routes
 - Priya patel: Frontend and routes.
+
+Deployed: https://mickeypizza.herokuapp.com/
